@@ -22,8 +22,8 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
 ## About the Repo
-Just want to add that the pre-written sql file is inisde the database url
-Thank you.
+Just want to add that the pre-written sql file is inisde the database url.<p>
+Thank you.</p>
 
 
 ## License
