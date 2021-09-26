@@ -197,16 +197,20 @@
 
                         
                         <li class="nav-item dropdown user-profile-dropdown order-lg-0 order-1">
+                           @if(Route::has('login'))
                             <a href="javascript:void(0);" class="nav-link dropdown-toggle user" id="user-profile-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <div class="media">
-                                   
+                                   @guest
                                     <img src="{{ asset('assets/img/90x90.jpg') }}" class="img-fluid" alt="admin-profile">
+                                    @else
                                     <div class="media-body align-self-center">
-                                        <h6><span>Hi, </span></h6>
+                                        <h6><span>Hi, </span>{{ Auth::user()->name }}</h6>
                                     </div>
+                                    @endguest
                                 </div>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>
                             </a>
+                            @endif
                             <div class="dropdown-menu position-absolute animated fadeInUp" aria-labelledby="user-profile-dropdown">
                                 <div class="">
                                     @if(Route::has('login'))
